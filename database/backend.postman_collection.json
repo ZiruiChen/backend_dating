@@ -1,0 +1,780 @@
+{
+	"info": {
+		"_postman_id": "12310265-c8c7-460e-a544-c394dc709dd1",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123\", \r\n    \"name\": \"321\", \r\n    \"idcard\": \"3131\", \r\n    \"telephone\":1233, \r\n    \"wechat\": \"1323\", \r\n    \"nickname\": \"123\", \r\n    \"icon\": \"http://localhost:9090/file/download/a18c694cc8244059954fcab5383f6107.bmp\", \r\n    \"nationality\":12, \r\n    \"birthdate\": \"1997-05-06\",\r\n    \"gender\":1, \r\n    \"height\":123,\r\n    \"weight\":123, \r\n    \"married\":1, \r\n    \"intro\": \"123\", \r\n    \"hobby\": 13, \r\n    \"address\": \"123\", \r\n    \"education\": \"P\", \r\n    \"income\":12, \r\n    \"property\": \"123\", \r\n    \"smoking\":1, \r\n    \"drinking\":1, \r\n    \"album\": \"\", \r\n    \"register_date\": null, \r\n    \"last_login_time\": null, \r\n    \"membership\": null, \r\n    \"pause\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\", \r\n    \"name\": \"321\", \r\n    \"idcard\": \"123\", \r\n    \"telephone\":123456, \r\n    \"wechat\": \"1234\", \r\n    \"nickname\": \"123\", \r\n    \"icon\": \"http://localhost:9090/file/download/a18c694cc8244059954fcab5383f6107.bmp\", \r\n    \"nationality\":12, \r\n    \"birthdate\": \"1997-05-06\",\r\n    \"gender\":1, \r\n    \"height\":123,\r\n    \"weight\":123, \r\n    \"married\":1, \r\n    \"intro\": \"123\", \r\n    \"hobby\": \"13\", \r\n    \"address\": \"123\", \r\n    \"education\": \"P\", \r\n    \"income\":12, \r\n    \"property\": \"123\", \r\n    \"smoking\":1, \r\n    \"drinking\":1, \r\n    \"album\": \"1;2;3\", \r\n    \"register_date\": null, \r\n    \"last_login_time\": null, \r\n    \"membership\": null, \r\n    \"pause\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDQiLCJ0ZWxlcGhvbmUiOjEyMywiZXhwIjoxNjc1OTQ0NjIyfQ.sXLtRZuFZCNaKUPrwl5UrbbFnqgEYKrOMZeHViQBFps",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": 123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/updatePassword/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"updatePassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telephone\": 123,\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get hobby list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/hobby/getHobbyList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hobby",
+						"getHobbyList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjM0NTYsImV4cCI6MTY3NTA4MzM3OH0.eDZuVphknxfNDuRDKzHJkVpBL2Gv426EdTVyzvE6rUw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://120.79.241.117:9090/user/detail?targetId=2",
+					"protocol": "http",
+					"host": [
+						"120",
+						"79",
+						"241",
+						"117"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "targetId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "manager get user detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDciLCJ0ZWxlcGhvbmUiOjE1ODUzMTk4NzMwLCJleHAiOjE2NzU4NTU4ODh9.7utRYVLF4CrS5pVvu6HIwqMIIfoi6YWn_LDZhuzkKpg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/user/detail?targetId=44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "targetId",
+							"value": "44"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get random user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get block list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/block/blockList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"block",
+						"blockList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get follow list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/follow/followList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"follow",
+						"followList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get hobbylist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/hobby/getHobby?query=黄&duplicate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hobby",
+						"getHobby"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "黄"
+						},
+						{
+							"key": "duplicate",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "// get all invitations which sent to me and pending",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/getList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "manager get invitation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDciLCJ0ZWxlcGhvbmUiOjE1ODUzMTk4NzMwLCJleHAiOjE2NzU4NTU4ODh9.7utRYVLF4CrS5pVvu6HIwqMIIfoi6YWn_LDZhuzkKpg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/manager/getList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"manager",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "// get invitations which sent by myself and pending",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/getMyInvitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"getMyInvitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all invitations which has been processed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/getHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"getHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get getSuccessInvitationList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/getSuccessInvitationList?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"getSuccessInvitationList"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update invitation 1 is accept, 2 is refuse, 3 is cancel",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczOTczNDg2fQ.d1Q0Phm_l_JSyMoEMBZ3RTFBPD3lGgtnyGEIYykM2Es",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/update?invitationId=2&state=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"update"
+					],
+					"query": [
+						{
+							"key": "invitationId",
+							"value": "2"
+						},
+						{
+							"key": "state",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add hobby",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/hobby/add?hobbyId=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hobby",
+						"add"
+					],
+					"query": [
+						{
+							"key": "hobbyId",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add invitation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/invitation/add?targetId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"invitation",
+						"add"
+					],
+					"query": [
+						{
+							"key": "targetId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/follow/addFollow?targetId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"follow",
+						"addFollow"
+					],
+					"query": [
+						{
+							"key": "targetId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/follow/cancelFollow?followId=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"follow",
+						"cancelFollow"
+					],
+					"query": [
+						{
+							"key": "followId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBlock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjc0MTUyMTMyfQ.rMXzRq0XJg78E03VB-T1Loab_yWRalHCDpdWD0EpwiE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/block/addBlock?targetId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"block",
+						"addBlock"
+					],
+					"query": [
+						{
+							"key": "targetId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Eric/Desktop/myEndIcon.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/file/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelBlock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczOTA3NzA4fQ.xlO6tQqx7OY_G7PbqIh8ABwtO4StqYTHOcYadFs5Pvk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/block/cancelBlock?blockId=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"block",
+						"cancelBlock"
+					],
+					"query": [
+						{
+							"key": "blockId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update hobby list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxIiwidGVsZXBob25lIjoxMjMzNDEyMywiZXhwIjoxNjczODg5NjczfQ.BTqJjRPU9jniEkSbCUP9CVeoJQmIdj77KEczYtcr-GI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/hobby/update?hobbyIdList=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hobby",
+						"update"
+					],
+					"query": [
+						{
+							"key": "hobbyIdList",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

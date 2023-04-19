@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zq.backend.mapper.UserMapper">
+
+    <insert id="insert_old">
+        INSERT INTO user(
+            password, name, idcard, telephone, wechat, nickname, icon, nationality, birthdate,
+            gender, height, weight, married, intro, hobby, address, education, income, property,
+            smoking, drinking, album, register_date, last_login_time, membership, pause)
+        VALUES(
+            #{password}, #{name}, #{idcard}, #{telephone}, #{wechat}, #{nickname},
+            #{icon}, #{nationality}, #{birthdate}, #{gender}, #{height}, #{weight}, #{married},
+            #{intro}, #{hobby}, #{address}, #{education}, #{income}, #{property}, #{smoking},
+            #{drinking}, #{album}, #{register_date}, #{last_login_time}, #{membership}, #{pause}
+            )
+
+    </insert>
+    <update id="update_old">
+        UPDATE user
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="idcard != null">
+                idcard = #{idcard},
+            </if>
+            <if test="telephone != null">
+                telephone = #{telephone},
+            </if>
+            <if test="wechat != null">
+                wechat = #{wechat},
+            </if>
+            <if test="nickname != null">
+                nickname = #{nickname},
+            </if>
+            <if test="icon != null">
+                icon = #{icon},
+            </if>
+            <if test="nationality != null">
+                nationality = #{nationality},
+            </if>
+            <if test="birthdate != null">
+                birthdate = #{birthdate},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="height != null">
+                height = #{height},
+            </if>
+            <if test="weight != null">
+                weight = #{weight},
+            </if>
+            <if test="married != null">
+                married = #{married},
+            </if>
+            <if test="intro != null">
+                intro = #{intro},
+            </if>
+            <if test="hobby != null">
+                hobby = #{hobby},
+            </if>
+            <if test="address != null">
+                address = #{address},
+            </if>
+            <if test="education != null">
+                education = #{education},
+            </if>
+            <if test="income != null">
+                income = #{income},
+            </if>
+            <if test="property != null">
+                property = #{property},
+            </if>
+            <if test="smoking != null">
+                smoking = #{smoking},
+            </if>
+            <if test="drinking != null">
+                drinking = #{drinking},
+            </if>
+            <if test="album != null">
+                album = #{album},
+            </if>
+            <if test="register_date != null">
+                register_date = #{register_date},
+            </if>
+            <if test="last_login_time != null">
+                last_login_time = #{last_login_time},
+            </if>
+            <if test="membership != null">
+                membership = #{membership},
+            </if>
+            <if test="pause != null">
+                pause = #{pause}
+            </if>
+
+        </set>
+        <where>
+            id = #{id}
+        </where>
+
+    </update>
+
+
+</mapper>
